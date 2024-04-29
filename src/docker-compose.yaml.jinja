@@ -5,15 +5,15 @@ services:
       network: host
     environment:
       - "{{ envprefix }}__HOST=${ {{- envprefix }}__HOST:-0.0.0.0}"
-      - "{{ envprefix }}__PORT=${ {{- envprefix }}__PORT:-{{ port -}} }"
-      - "{{ envprefix }}__WEB__PORT=${ {{- envprefix }}__WEB__PORT:-{{ webport -}} }"
-      - "{{ envprefix }}__WEB__URL=${ {{- envprefix }}__WEB__URL:-http://localhost:{{ webport -}} }"
-      - "{{ envprefix }}__USERS__ADMIN__USERNAME=${ {{- envprefix }}__USERS__ADMIN__USERNAME:-admin}"
-      - "{{ envprefix }}__USERS__ADMIN__PASSWORD=${ {{- envprefix }}__USERS__ADMIN__PASSWORD:-password}"
-      - "{{ envprefix }}__USERS__READONLY__USERNAME=${ {{- envprefix }}__USERS__READONLY__USERNAME:-readonly}"
-      - "{{ envprefix }}__USERS__READONLY__PASSWORD=${ {{- envprefix }}__USERS__READONLY__PASSWORD:-password}"
-      - "{{ envprefix }}__USERS__READWRITE__USERNAME=${ {{- envprefix }}__USERS__READWRITE__USERNAME:-readwrite}"
-      - "{{ envprefix }}__USERS__READWRITE__PASSWORD=${ {{- envprefix }}__USERS__READWRITE__PASSWORD:-password}"
+      - "{{ envprefix }}__PORTS__S3=${ {{- envprefix }}__PORTS__S3:-{{ port -}} }"
+      - "{{ envprefix }}__PORTS__WEB=${ {{- envprefix }}__PORTS__WEB:-{{ webport -}} }"
+      - "{{ envprefix }}__URLS__WEB=${ {{- envprefix }}__URLS__WEB:-http://localhost:{{ webport -}} }"
+      - "{{ envprefix }}__CREDENTIALS__ADMIN__USER=${ {{- envprefix }}__CREDENTIALS__ADMIN__USER:-admin}"
+      - "{{ envprefix }}__CREDENTIALS__ADMIN__PASSWORD=${ {{- envprefix }}__CREDENTIALS__ADMIN__PASSWORD:-password}"
+      - "{{ envprefix }}__CREDENTIALS__READONLY__USER=${ {{- envprefix }}__CREDENTIALS__READONLY__USER:-readonly}"
+      - "{{ envprefix }}__CREDENTIALS__READONLY__PASSWORD=${ {{- envprefix }}__CREDENTIALS__READONLY__PASSWORD:-password}"
+      - "{{ envprefix }}__CREDENTIALS__READWRITE__USER=${ {{- envprefix }}__CREDENTIALS__READWRITE__USER:-readwrite}"
+      - "{{ envprefix }}__CREDENTIALS__READWRITE__PASSWORD=${ {{- envprefix }}__CREDENTIALS__READWRITE__PASSWORD:-password}"
     network_mode: host
     volumes:
       - data:/database/data/

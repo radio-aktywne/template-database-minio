@@ -3,15 +3,15 @@
 # Configuration
 
 host="${ {{- envprefix }}__HOST:-0.0.0.0}"
-port="${ {{- envprefix }}__PORT:-{{ port -}} }"
-web_port="${ {{- envprefix }}__WEB__PORT:-{{ webport -}} }"
-web_public_url="${ {{- envprefix }}__WEB__URL:-http://localhost:{{ webport -}} }"
-admin_user="${ {{- envprefix }}__USERS__ADMIN__USERNAME:-admin}"
-admin_password="${ {{- envprefix }}__USERS__ADMIN__PASSWORD:-password}"
-readonly_user="${ {{- envprefix }}__USERS__READONLY__USERNAME:-readonly}"
-readonly_password="${ {{- envprefix }}__USERS__READONLY__PASSWORD:-password}"
-readwrite_user="${ {{- envprefix }}__USERS__READWRITE__USERNAME:-readwrite}"
-readwrite_password="${ {{- envprefix }}__USERS__READWRITE__PASSWORD:-password}"
+port="${ {{- envprefix }}__PORTS__S3:-{{ port -}} }"
+web_port="${ {{- envprefix }}__PORTS__WEB:-{{ webport -}} }"
+web_public_url="${ {{- envprefix }}__URLS__WEB:-http://localhost:{{ webport -}} }"
+admin_user="${ {{- envprefix }}__CREDENTIALS__ADMIN__USER:-admin}"
+admin_password="${ {{- envprefix }}__CREDENTIALS__ADMIN__PASSWORD:-password}"
+readonly_user="${ {{- envprefix }}__CREDENTIALS__READONLY__USER:-readonly}"
+readonly_password="${ {{- envprefix }}__CREDENTIALS__READONLY__PASSWORD:-password}"
+readwrite_user="${ {{- envprefix }}__CREDENTIALS__READWRITE__USER:-readwrite}"
+readwrite_password="${ {{- envprefix }}__CREDENTIALS__READWRITE__PASSWORD:-password}"
 bucket=default
 
 # Start MinIO
