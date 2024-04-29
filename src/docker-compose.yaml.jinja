@@ -4,16 +4,16 @@ services:
       context: ./
       network: host
     environment:
-      - "{{ envprefix }}_HOST=${ {{- envprefix }}_HOST:-0.0.0.0}"
-      - "{{ envprefix }}_PORT=${ {{- envprefix }}_PORT:-{{ port -}} }"
-      - "{{ envprefix }}_WEB_PORT=${ {{- envprefix }}_WEB_PORT:-{{ webport -}} }"
-      - "{{ envprefix }}_WEB_PUBLIC_URL=${ {{- envprefix }}_WEB_PUBLIC_URL:-http://localhost:{{ webport -}} }"
-      - "{{ envprefix }}_ADMIN_USER=${ {{- envprefix }}_ADMIN_USER:-admin}"
-      - "{{ envprefix }}_ADMIN_PASSWORD=${ {{- envprefix }}_ADMIN_PASSWORD:-password}"
-      - "{{ envprefix }}_READONLY_USER=${ {{- envprefix }}_READONLY_USER:-readonly}"
-      - "{{ envprefix }}_READONLY_PASSWORD=${ {{- envprefix }}_READONLY_PASSWORD:-password}"
-      - "{{ envprefix }}_READWRITE_USER=${ {{- envprefix }}_READWRITE_USER:-readwrite}"
-      - "{{ envprefix }}_READWRITE_PASSWORD=${ {{- envprefix }}_READWRITE_PASSWORD:-password}"
+      - "{{ envprefix }}__HOST=${ {{- envprefix }}__HOST:-0.0.0.0}"
+      - "{{ envprefix }}__PORT=${ {{- envprefix }}__PORT:-{{ port -}} }"
+      - "{{ envprefix }}__WEB__PORT=${ {{- envprefix }}__WEB__PORT:-{{ webport -}} }"
+      - "{{ envprefix }}__WEB__URL=${ {{- envprefix }}__WEB__URL:-http://localhost:{{ webport -}} }"
+      - "{{ envprefix }}__USERS__ADMIN__USERNAME=${ {{- envprefix }}__USERS__ADMIN__USERNAME:-admin}"
+      - "{{ envprefix }}__USERS__ADMIN__PASSWORD=${ {{- envprefix }}__USERS__ADMIN__PASSWORD:-password}"
+      - "{{ envprefix }}__USERS__READONLY__USERNAME=${ {{- envprefix }}__USERS__READONLY__USERNAME:-readonly}"
+      - "{{ envprefix }}__USERS__READONLY__PASSWORD=${ {{- envprefix }}__USERS__READONLY__PASSWORD:-password}"
+      - "{{ envprefix }}__USERS__READWRITE__USERNAME=${ {{- envprefix }}__USERS__READWRITE__USERNAME:-readwrite}"
+      - "{{ envprefix }}__USERS__READWRITE__PASSWORD=${ {{- envprefix }}__USERS__READWRITE__PASSWORD:-password}"
     network_mode: host
     volumes:
       - data:/database/data/
