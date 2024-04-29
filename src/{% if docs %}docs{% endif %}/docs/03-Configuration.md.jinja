@@ -7,13 +7,13 @@ title: Configuration
 
 You can configure the database at runtime using various environment variables:
 
-- `{{ envprefix }}__HOST` -
+- `{{ envprefix }}__SERVER__HOST` -
   host on which the database will be listening
   (default: `0.0.0.0`)
-- `{{ envprefix }}__PORTS__S3` -
+- `{{ envprefix }}__SERVER__PORTS__S3` -
   port on which the database will be listening
   (default: `{{ port }}`)
-- `{{ envprefix }}__PORTS__WEB` -
+- `{{ envprefix }}__SERVER__PORTS__WEB` -
   port on which the web interface will be available
   (default: `{{ webport }}`)
 - `{{ envprefix }}__URLS__WEB` -
