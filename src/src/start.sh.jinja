@@ -2,9 +2,9 @@
 
 # Configuration
 
-host="${ {{- envprefix }}__HOST:-0.0.0.0}"
-port="${ {{- envprefix }}__PORTS__S3:-{{ port -}} }"
-web_port="${ {{- envprefix }}__PORTS__WEB:-{{ webport -}} }"
+host="${ {{- envprefix }}__SERVER__HOST:-0.0.0.0}"
+port="${ {{- envprefix }}__SERVER__PORTS__S3:-{{ port -}} }"
+web_port="${ {{- envprefix }}__SERVER__PORTS__WEB:-{{ webport -}} }"
 web_public_url="${ {{- envprefix }}__URLS__WEB:-http://localhost:{{ webport -}} }"
 admin_user="${ {{- envprefix }}__CREDENTIALS__ADMIN__USER:-admin}"
 admin_password="${ {{- envprefix }}__CREDENTIALS__ADMIN__PASSWORD:-password}"
