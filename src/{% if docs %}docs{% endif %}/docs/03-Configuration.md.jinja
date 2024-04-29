@@ -10,30 +10,30 @@ You can configure the database at runtime using various environment variables:
 - `{{ envprefix }}__HOST` -
   host on which the database will be listening
   (default: `0.0.0.0`)
-- `{{ envprefix }}__PORT` -
+- `{{ envprefix }}__PORTS__S3` -
   port on which the database will be listening
   (default: `{{ port }}`)
-- `{{ envprefix }}__WEB__PORT` -
+- `{{ envprefix }}__PORTS__WEB` -
   port on which the web interface will be available
   (default: `{{ webport }}`)
-- `{{ envprefix }}__WEB__URL` -
+- `{{ envprefix }}__URLS__WEB` -
   public URL of the web interface
   (default: `http://localhost:{{ webport }}`)
-- `{{ envprefix }}__USERS__ADMIN__USERNAME` -
+- `{{ envprefix }}__CREDENTIALS__ADMIN__USER` -
   username for the admin user
   (default: `admin`)
-- `{{ envprefix }}__USERS__ADMIN__PASSWORD` -
+- `{{ envprefix }}__CREDENTIALS__ADMIN__PASSWORD` -
   password for the admin user
   (default: `password`)
-- `{{ envprefix }}__USERS__READONLY__USERNAME` -
+- `{{ envprefix }}__CREDENTIALS__READONLY__USER` -
   username for the readonly user
   (default: `readonly`)
-- `{{ envprefix }}__USERS__READONLY__PASSWORD` -
+- `{{ envprefix }}__CREDENTIALS__READONLY__PASSWORD` -
   password for the readonly user
   (default: `password`)
-- `{{ envprefix }}__USERS__READWRITE__USERNAME` -
+- `{{ envprefix }}__CREDENTIALS__READWRITE__USER` -
   username for the readwrite user
   (default: `readwrite`)
-- `{{ envprefix }}__USERS__READWRITE__PASSWORD` -
+- `{{ envprefix }}__CREDENTIALS__READWRITE__PASSWORD` -
   password for the readwrite user
   (default: `password`)
