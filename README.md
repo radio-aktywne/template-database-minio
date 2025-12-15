@@ -14,8 +14,7 @@ MinIO database template 🦩
 ## 💡 About
 
 This repository contains a [`copier`](https://copier.readthedocs.io) template
-that can be used to create [`MinIO`](https://min.io) databases for
-[`radio-aktywne`](https://github.com/radio-aktywne).
+that can be used to create [`MinIO`](https://min.io) databases.
 
 ## 📜 Usage
 
